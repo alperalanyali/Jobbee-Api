@@ -14,8 +14,8 @@ const sendEmail = async options => {
         host:"smtp.office365.com",
         port:587,
         auth:{
-            user:"alper_alanyali@hotmail.com",
-            pass:"Dtmetallica55369"
+            user:process.env.SMPT_HOTMAIL_USER,
+            pass:process.env.SMPT_HOTMAIL_PASSWORD
         }
     })
     /*const message =  {
