@@ -13,9 +13,9 @@ var hpp = require('hpp');
 const cors = require('cors')
 
 
-const geoCoder = require('./Utils/geocoder')
+const geoCoder = require('./utils/geocoder')
 const errorMiddleware = require('./middlewares/errors')
-const ErrorHandler = require('./Utils/errorHandler')
+const ErrorHandler = require('./utils/errorHandler')
 //Setting up  config.env file variables
 app.use(bodyparser.json())
 dotnev.config({path: './config/config.env'})
