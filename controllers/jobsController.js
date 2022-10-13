@@ -42,7 +42,9 @@ exports.newJob = catchAsyncErrors( async (req,res,next)=>{
     job.salary = req.body.salary
     job.save()
     */
+   
    //#endregion
+   
    
    //Adding user to body
    req.body.user  = req.user.id
