@@ -173,4 +173,3 @@ async function deleteUserData(user,role){
         }
     }
 }
-

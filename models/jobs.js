@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const validator = require('validator')
 const slugify = require('slugify')
-const geoCoder = require('../Utils/geocoder')
+const geoCoder = require('../utils/geocoder')
 const enumIndustry = [
     'Business',
     'Information Technology',

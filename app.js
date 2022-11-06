@@ -13,7 +13,9 @@ var hpp = require('hpp');
 const cors = require('cors')
 
 
+
 const geoCoder = require('./utils/geocoder')
+
 const errorMiddleware = require('./middlewares/errors')
 const ErrorHandler = require('./utils/errorHandler')
 //Setting up  config.env file variables
@@ -24,6 +26,7 @@ dotnev.config({path: './config/config.env'})
 const jobs = require('./routes/jobs')
 const auth = require('./routes/auth')
 const user = require('./routes/user')
+
 
 app.use(bodyparser.urlencoded({
     extended:true
@@ -71,8 +74,10 @@ app.use(cors())
 
 //connecting to database
 connectDatabase()
-//Handle unhandle routes
-
+//Handle unhandle routes 
+app.get('/',(req,res)=>{
+    res.sendFile(__dirname+'/public/index.html')
+})
 app.use(apiURL,jobs)
 app.use(apiURL,auth)
 app.use(apiURL,user)
@@ -92,4 +97,3 @@ process.on('unhandledRejection',(err)=>{
         process.exit(1)                
     })
 })
-
