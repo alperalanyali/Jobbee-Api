@@ -34,7 +34,7 @@ app.use(bodyparser.urlencoded({
 const apiURL = '/api/v1'
 
 
-const PORT = process.env.PORT 
+const PORT = process.env.PORT || 3000
 const connectDatabase = require('./config/database')
 const { mongo } = require('mongoose')
 //Setup security headers
