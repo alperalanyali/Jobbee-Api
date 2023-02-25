@@ -28,7 +28,7 @@ const sendEmail = async options => {
     console.log(options.message);
     const message =  {
         //from:`${process.env.SMTP_FROM_NAME} <${process.env.SMTP_FROM_EMAIL}>`,
-        from:"alper_alanyali@hotmail.com",
+        from:"add your email",
         to:options.email,
         subject:'Jobbee',
         text: options.message
